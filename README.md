@@ -1,8 +1,22 @@
-# Apitest
+# Nxsample
 
-nx show projects
-nx affected --parallel=2 --verbose=false --target=build
-nx run-many --parallel=2 --verbose=false --target=build
+
+## Setup React monorepo
+`pnpx create-nx-workspace@latest nxsample --preset=react-monorepo`
+`pnpm install @nxrocks/nx-spring-boot --save-dev`
+`nx g @nxrocks/nx-spring-boot:project springservice`
+`nx g @nxrocks/nx-spring-boot:project springlib --directory libs`
+`nx show projects`
+`nx dep-graph`
+`nx g @nxrocks/nx-spring-boot:link --sourceProjectName springlib --targetProjectName springservice`
+
+## Not working
+`nx build springlib`
+`nx build springservice`
+`nx affected --parallel=2 --verbose=true --target=build`
+`nx run-many --parallel=2 --verbose=true --target=build`
+
+
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
@@ -16,11 +30,11 @@ comes with a LSP for Vim users.
 
 ## Start the application
 
-Run `npx nx serve apitest` to start the development server. Happy coding!
+Run `npx nx serve nxsamplespring` to start the development server. Happy coding!
 
 ## Build for production
 
-Run `npx nx build apitest` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
+Run `npx nx build nxsamplespring` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
 
 ## Running tasks
 
