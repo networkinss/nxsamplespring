@@ -3,7 +3,5 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/springservice/src",
   "tags": [],
-  "implicitDependencies": [
-    "springlib"
-  ]
+  "implicitDependencies": []
 }
