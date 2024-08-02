@@ -8,18 +8,20 @@ Sample setup for spring boot plugin.
 5. Link springlib to springservice.
 
 ## Setup React monorepo
-`pnpx create-nx-workspace@latest nxsample --preset=react-monorepo`
+
+`pnpx create-nx-workspace@latest nxsample --preset=react-monorepo`  
 `pnpm install @nxrocks/nx-spring-boot --save-dev`
-`nx g @nxrocks/nx-spring-boot:project springservice`
-`nx g @nxrocks/nx-spring-boot:project springlib --directory libs`
-`nx show projects`
-`nx dep-graph`
+`nx g @nxrocks/nx-spring-boot:project springservice`  
+`nx g @nxrocks/nx-spring-boot:project springlib --directory libs`  
+`nx show projects`  
+`nx dep-graph`  
 `nx g @nxrocks/nx-spring-boot:link --sourceProjectName springlib --targetProjectName springservice`
 
 ## Not working
-`nx build springlib`
-`nx build springservice`
-`nx affected --parallel=2 --verbose=true --target=build`
+
+`nx build springlib`  
+`nx build springservice`  
+`nx affected --parallel=2 --verbose=true --target=build`  
 `nx run-many --parallel=2 --verbose=true --target=build`
 
 
