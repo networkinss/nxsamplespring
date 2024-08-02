@@ -1,5 +1,11 @@
 # Nxsample
 
+Sample setup for spring boot plugin.
+1. Create React monorepo.
+2. Add @nxrocks/nx-spring-boot.
+3. Create app springservice in apps.
+4. Create library springlib in libs.
+5. Link springlib to springservice.
 
 ## Setup React monorepo
 `pnpx create-nx-workspace@latest nxsample --preset=react-monorepo`
